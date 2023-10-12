@@ -34,6 +34,7 @@ border-color: rgb(237, 18, 18);">
     <p id="penalty">Penalty is zero</p>
     <p onclick="help()">Click for help</p>
     <p id="help">Help report</p>
+    <button onclick="newGame()">New Game</button>
 </div>
     <div class="container"  style=" color: rgb(14, 62, 104); background-color: antiquewhite; border-color:rgb(237, 18, 18);">
         <div class="row">
@@ -129,6 +130,18 @@ border-color: rgb(237, 18, 18);">
             myhelp.innerHTML = "Step Faster";
           }
       }
+      function newGame() {
+                trapLocation = Math.floor(Math.random() * 25);
+                treasureLocation = Math.floor(Math.random() * 25);
+                checkCount = 0;
+                penalty = 0;
+                lastCheck = 0;
+                gameOver = false;
+                document.getElementById("locations").innerHTML = "Number of locations checked is 0";
+                document.getElementById("penalty").innerHTML = "Penalty is 0";
+                document.getElementById("help").innerHTML = "Click for help";
+                
+            }  
           </script>
 </body>
 </html>
